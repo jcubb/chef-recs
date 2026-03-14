@@ -22,18 +22,22 @@ def load_sources() -> list[dict]:
 def run_pipeline(scrape: bool = True, build: bool = True) -> None:
     from openai import OpenAI
     from src.scraper import scrape_new_articles
-    from src.extractor import extract_restaurants
+    from src.extractor import extract_restaurants, extract_chef_info
     from src.store import (
         get_processed_urls,
         upsert_restaurants,
         mark_processed,
         geocode_missing,
+        upsert_chef,
     )
     from src.site_generator import build_site
 
     if scrape:
         sources = load_sources()
         processed_urls = get_processed_urls()
+
+        # Build city filter map: source name -> list of allowed cities
+        source_city_filters = {s["name"]: s.get("city_filter") for s in sources}
 
         print(f"\n[run] Starting scrape ({len(sources)} source(s))...")
         articles = scrape_new_articles(sources, processed_urls)
@@ -46,15 +50,27 @@ def run_pipeline(scrape: bool = True, build: bool = True) -> None:
 
             for article in articles:
                 print(f"\n[run] Extracting: {article['title']}")
+
+                # Extract chef info
+                try:
+                    chef_info = extract_chef_info(article, client)
+                    if chef_info:
+                        added_chef = upsert_chef(article, chef_info)
+                        if added_chef:
+                            print(f"  [run] Chef: {chef_info['name']} of {chef_info.get('restaurant', '?')}")
+                except Exception as e:
+                    print(f"  [run] Chef extraction failed: {e}")
+
                 try:
                     restaurants = extract_restaurants(article, client)
                 except Exception as e:
                     print(f"  [run] Extraction failed: {e}")
                     restaurants = []
 
-                added, merged = upsert_restaurants(restaurants)
+                city_filter = source_city_filters.get(article["source_name"])
+                added, merged = upsert_restaurants(restaurants, city_filter=city_filter)
                 mark_processed(article, len(restaurants))
-                print(f"  [run] {len(restaurants)} extracted → {added} added, {merged} merged")
+                print(f"  [run] {len(restaurants)} extracted -> {added} added, {merged} merged")
 
         print("\n[run] Geocoding missing coordinates...")
         geocoded = geocode_missing()

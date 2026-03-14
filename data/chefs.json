@@ -1,0 +1,52 @@
+[
+  {
+    "id": "alexia-duchene",
+    "name": "Alexia Duchene",
+    "restaurant": "Ernst",
+    "city": "New York",
+    "article_url": "https://eatingwithexperts.substack.com/p/where-chef-alexia-duchene-eats-in",
+    "article_title": "Where Chef Alexia Duchene Eats in NYC",
+    "article_date": "",
+    "source_name": "Eating with Experts"
+  },
+  {
+    "id": "phil-rosenthal",
+    "name": "Phil Rosenthal",
+    "restaurant": "",
+    "city": "New York",
+    "article_url": "https://eatingwithexperts.substack.com/p/where-somebody-feed-phil-eats-in",
+    "article_title": "Where Somebody Feed Phil Eats in NYC",
+    "article_date": "",
+    "source_name": "Eating with Experts"
+  },
+  {
+    "id": "luis-herrera",
+    "name": "Luis Herrera",
+    "restaurant": "Ensenada",
+    "city": "New York",
+    "article_url": "https://eatingwithexperts.substack.com/p/where-chef-luis-herrera-eats-in-nyc",
+    "article_title": "Where Chef Luis Herrera Eats in NYC",
+    "article_date": "",
+    "source_name": "Eating with Experts"
+  },
+  {
+    "id": "yara-herrera",
+    "name": "Yara Herrera",
+    "restaurant": "Hellbender",
+    "city": "New York",
+    "article_url": "https://eatingwithexperts.substack.com/p/where-chef-yara-of-hellbender-eats",
+    "article_title": "Where Chef Yara of Hellbender Eats in NYC",
+    "article_date": "",
+    "source_name": "Eating with Experts"
+  },
+  {
+    "id": "enrique-olvera",
+    "name": "Enrique Olvera",
+    "restaurant": "Cosme",
+    "city": "New York",
+    "article_url": "https://eatingwithexperts.substack.com/p/where-mexico-citys-legendary-chef",
+    "article_title": "Where Mexico City's Legendary Chef Enrique Olvera Eats in NYC",
+    "article_date": "",
+    "source_name": "Eating with Experts"
+  }
+]

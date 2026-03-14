@@ -42,8 +42,8 @@
     "context": [
       "Chef Alexia describes Bar Pitti as a place for great pasta, especially enjoyable with a spritz on nice weather days."
     ],
-    "latitude": null,
-    "longitude": null,
+    "latitude": 40.7291334,
+    "longitude": -74.0021646,
     "added_date": "2026-03-14"
   },
   {
@@ -107,8 +107,8 @@
     "context": [
       "Alexia recommends Noz Market for its high-quality hand rolls made with fresh fish flown in from Japan."
     ],
-    "latitude": null,
-    "longitude": null,
+    "latitude": 40.773817,
+    "longitude": -73.9579582,
     "added_date": "2026-03-14"
   },
   {
@@ -196,8 +196,8 @@
     "context": [
       "Peter Luger is a century-old steakhouse known for its impressive steaks and casual German beer hall decor."
     ],
-    "latitude": null,
-    "longitude": null,
+    "latitude": 40.7098661,
+    "longitude": -73.9625564,
     "added_date": "2026-03-14"
   },
   {
@@ -569,8 +569,8 @@
     "context": [
       "Yara enjoys Corima for its innovative Mexican cuisine and the experience of sitting at the chef's counter, particularly loving the duck enmoladas."
     ],
-    "latitude": null,
-    "longitude": null,
+    "latitude": 40.7146828,
+    "longitude": -73.9931273,
     "added_date": "2026-03-14"
   },
   {
@@ -689,6 +689,188 @@
     ],
     "latitude": 40.7308697,
     "longitude": -73.9896752,
+    "added_date": "2026-03-14"
+  },
+  {
+    "id": "russ-daughters-lower-east-side",
+    "name": "Russ & Daughters",
+    "neighborhood": "Lower East Side",
+    "city": "New York",
+    "cuisine": "Jewish",
+    "recommended_dishes": [
+      "fish platter with a bialy"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Enrique Olvera",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-mexico-citys-legendary-chef",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "This iconic bagel shop is known for its classic Jewish appetizing favorites, and Chef Enrique enjoys their lox bagels."
+    ],
+    "latitude": 40.7196388,
+    "longitude": -73.9895629,
+    "added_date": "2026-03-14"
+  },
+  {
+    "id": "cafe-integral-manhattan",
+    "name": "Cafe Integral",
+    "neighborhood": "Manhattan",
+    "city": "New York",
+    "cuisine": "Coffee",
+    "recommended_dishes": [
+      "cortados"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Enrique Olvera",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-mexico-citys-legendary-chef",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Enrique enjoys the amazing Nicaraguan coffee served here, particularly their cortados."
+    ],
+    "latitude": 40.7202995,
+    "longitude": -73.9952147,
+    "added_date": "2026-03-14"
+  },
+  {
+    "id": "sadelles-manhattan",
+    "name": "Sadelle’s",
+    "neighborhood": "Manhattan",
+    "city": "New York",
+    "cuisine": "American",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Enrique Olvera",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-mexico-citys-legendary-chef",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Enrique loves Sadelle’s for its brunch classics, especially due to the availability of smoked salmon."
+    ],
+    "latitude": 40.7262525,
+    "longitude": -74.0001116,
+    "added_date": "2026-03-14"
+  },
+  {
+    "id": "le-bernardin-manhattan",
+    "name": "Le Bernardin",
+    "neighborhood": "Manhattan",
+    "city": "New York",
+    "cuisine": "Seafood",
+    "recommended_dishes": [
+      "pre-fixe lunch menu"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Enrique Olvera",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-mexico-citys-legendary-chef",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Enrique praises the elegant pre-fixe lunch for its simplicity, great service, and excellent wine list."
+    ],
+    "latitude": 40.7613945,
+    "longitude": -73.981691,
+    "added_date": "2026-03-14"
+  },
+  {
+    "id": "altro-paradiso-manhattan",
+    "name": "Altro Paradiso",
+    "neighborhood": "Manhattan",
+    "city": "New York",
+    "cuisine": "Italian",
+    "recommended_dishes": [
+      "panna cotta",
+      "house-made pastas"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Enrique Olvera",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-mexico-citys-legendary-chef",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Enrique recommends this Michelin-recognized spot for its delicious pasta and panna cotta, along with affordable cocktails during aperitivo hours."
+    ],
+    "latitude": 40.7254542,
+    "longitude": -74.0047415,
+    "added_date": "2026-03-14"
+  },
+  {
+    "id": "bar-contra-manhattan",
+    "name": "Bar Contra",
+    "neighborhood": "Manhattan",
+    "city": "New York",
+    "cuisine": "Cocktails",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Enrique Olvera",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-mexico-citys-legendary-chef",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Enrique enjoys visiting Bar Contra for its innovative cocktails and small plates."
+    ],
+    "latitude": 40.7199157,
+    "longitude": -73.9891737,
+    "added_date": "2026-03-14"
+  },
+  {
+    "id": "wildair-manhattan",
+    "name": "Wildair",
+    "neighborhood": "Manhattan",
+    "city": "New York",
+    "cuisine": "American",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Enrique Olvera",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-mexico-citys-legendary-chef",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Enrique appreciates the seasonal ingredients and extensive menu at Wildair, as well as the desserts."
+    ],
+    "latitude": 40.7200045,
+    "longitude": -73.9891428,
+    "added_date": "2026-03-14"
+  },
+  {
+    "id": "cosme-manhattan",
+    "name": "Cosme",
+    "neighborhood": "Manhattan",
+    "city": "New York",
+    "cuisine": "Mexican",
+    "recommended_dishes": [
+      "seasonal uni tostada",
+      "corn husk meringue",
+      "strip steak",
+      "duck carnitas"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Enrique Olvera",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-mexico-citys-legendary-chef",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Enrique suggests these standout dishes from his own restaurant, highlighting the unique corn husk meringue."
+    ],
+    "latitude": 40.7395503,
+    "longitude": -73.9883884,
     "added_date": "2026-03-14"
   }
 ]

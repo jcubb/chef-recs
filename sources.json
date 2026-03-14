@@ -3,6 +3,7 @@
     "name": "Eating with Experts",
     "archive_url": "https://eatingwithexperts.substack.com/archive",
     "enabled": true,
-    "url_pattern": "where-"
+    "url_pattern": "where-",
+    "city_filter": ["New York", "New York City", "NYC", "Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island"]
   }
 ]

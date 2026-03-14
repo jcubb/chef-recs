@@ -4,13 +4,16 @@ from datetime import date
 
 DOCS_DIR = Path(__file__).parent.parent / "docs"
 DATA_FILE = Path(__file__).parent.parent / "data" / "restaurants.json"
+CHEFS_FILE = Path(__file__).parent.parent / "data" / "chefs.json"
 
 
 def build_site() -> None:
     DOCS_DIR.mkdir(exist_ok=True)
 
     restaurants = json.loads(DATA_FILE.read_text(encoding="utf-8")) if DATA_FILE.exists() else []
+    chefs = json.loads(CHEFS_FILE.read_text(encoding="utf-8")) if CHEFS_FILE.exists() else []
     data_json = json.dumps(restaurants, ensure_ascii=False)
+    chefs_json = json.dumps(chefs, ensure_ascii=False)
     today = date.today().isoformat()
 
     html = f"""<!DOCTYPE html>
@@ -198,6 +201,53 @@ def build_site() -> None:
     #map-view {{ display: none; }}
     #map {{ height: calc(100vh - 120px); }}
 
+    /* ── Chefs view ── */
+    #chefs-view {{ display: none; padding: 12px 20px 40px; }}
+
+    .chefs-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }}
+
+    .chef-card {{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      transition: border-color 0.15s;
+    }}
+
+    .chef-card:hover {{ border-color: var(--accent); }}
+
+    .chef-name {{
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }}
+
+    .chef-restaurant {{
+      font-size: 14px;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }}
+
+    .chef-meta {{
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }}
+
+    .chef-article a {{
+      font-size: 12px;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+    }}
+
+    .chef-article a:hover {{ color: var(--accent); border-color: var(--accent); }}
+
     /* Leaflet popup overrides */
     .leaflet-popup-content-wrapper {{
       background: var(--surface);
@@ -235,6 +285,7 @@ def build_site() -> None:
   <div class="view-toggle">
     <button class="view-btn active" onclick="showView('list')">List</button>
     <button class="view-btn" onclick="showView('map')">Map</button>
+    <button class="view-btn" onclick="showView('chefs')">Chefs</button>
   </div>
 </header>
 
@@ -264,8 +315,13 @@ def build_site() -> None:
   <div id="map"></div>
 </div>
 
+<div id="chefs-view">
+  <div class="chefs-grid" id="chefs-grid"></div>
+</div>
+
 <script>
 const ALL_RESTAURANTS = {data_json};
+const ALL_CHEFS = {chefs_json};
 
 let filtered = [...ALL_RESTAURANTS];
 let map = null;
@@ -278,6 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {{
     ALL_RESTAURANTS.length + ' restaurants';
   populateFilters();
   applyFilters();
+  renderChefs();
 }});
 
 // ── Filters ────────────────────────────────────────────────────────────────
@@ -422,6 +479,33 @@ function renderMapMarkers() {{
   }});
 }}
 
+// ── Chefs view ─────────────────────────────────────────────────────────────
+
+function renderChefs() {{
+  const grid = document.getElementById('chefs-grid');
+  if (!ALL_CHEFS.length) {{
+    grid.innerHTML = '<div class="empty"><h2>No chefs yet</h2><p>Run the pipeline to populate chef data.</p></div>';
+    return;
+  }}
+
+  grid.innerHTML = ALL_CHEFS.map(c => {{
+    const restaurantHtml = c.restaurant
+      ? `<div class="chef-restaurant">${{c.restaurant}}</div>`
+      : '';
+    const cityHtml = c.city ? `<div class="chef-meta">${{c.city}}</div>` : '';
+    const dateStr = c.article_date ? ` &middot; ${{c.article_date}}` : '';
+    const articleHtml = c.article_url
+      ? `<div class="chef-article"><a href="${{c.article_url}}" target="_blank" rel="noopener">${{c.article_title}}${{dateStr}}</a></div>`
+      : '';
+    return `<div class="chef-card">
+      <div class="chef-name">${{c.name}}</div>
+      ${{restaurantHtml}}
+      ${{cityHtml}}
+      ${{articleHtml}}
+    </div>`;
+  }}).join('');
+}}
+
 // ── View toggle ────────────────────────────────────────────────────────────
 
 function showView(view) {{
@@ -430,14 +514,21 @@ function showView(view) {{
 
   const listEl = document.getElementById('list-view');
   const mapEl = document.getElementById('map-view');
+  const chefsEl = document.getElementById('chefs-view');
+
+  listEl.style.display = 'none';
+  mapEl.style.display = 'none';
+  chefsEl.style.display = 'none';
+  document.querySelector('.filters').style.display = view === 'chefs' ? 'none' : '';
+  document.getElementById('result-count').style.display = view === 'chefs' ? 'none' : '';
 
   if (view === 'map') {{
-    listEl.style.display = 'none';
     mapEl.style.display = 'block';
     if (!map) initMap();
     else renderMapMarkers();
+  }} else if (view === 'chefs') {{
+    chefsEl.style.display = 'block';
   }} else {{
-    mapEl.style.display = 'none';
     listEl.style.display = 'block';
   }}
 }}
@@ -448,4 +539,4 @@ function showView(view) {{
 </html>"""
 
     (DOCS_DIR / "index.html").write_text(html, encoding="utf-8")
-    print(f"[site] Built docs/index.html ({len(restaurants)} restaurants)")
+    print(f"[site] Built docs/index.html ({len(restaurants)} restaurants, {len(chefs)} chefs)")

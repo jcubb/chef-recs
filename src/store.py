@@ -7,6 +7,7 @@ from slugify import slugify
 DATA_DIR = Path(__file__).parent.parent / "data"
 RESTAURANTS_FILE = DATA_DIR / "restaurants.json"
 PROCESSED_FILE = DATA_DIR / "processed.json"
+CHEFS_FILE = DATA_DIR / "chefs.json"
 
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
 GEOCODE_HEADERS = {
@@ -91,11 +92,16 @@ def _merge_into(existing: dict, new: dict) -> None:
         existing["neighborhood"] = new["neighborhood"]
 
 
-def upsert_restaurants(new_records: list[dict]) -> tuple[int, int]:
+def upsert_restaurants(new_records: list[dict], city_filter: list[str] | None = None) -> tuple[int, int]:
     """
     Add new restaurant records to the store, merging duplicates.
+    If city_filter is provided, only records whose city matches (case-insensitive) are kept.
     Returns (added, merged) counts.
     """
+    if city_filter:
+        allowed = {c.lower() for c in city_filter}
+        new_records = [r for r in new_records if r.get("city", "").lower() in allowed]
+
     restaurants = load_restaurants()
     index = {r["id"]: i for i, r in enumerate(restaurants)}
 
@@ -151,16 +157,8 @@ def mark_processed(article: dict, restaurants_extracted: int) -> None:
 
 # ─── Geocoding ────────────────────────────────────────────────────────────────
 
-def _geocode_one(name: str, neighborhood: str, city: str) -> tuple[float, float] | tuple[None, None]:
+def _nominatim_query(query: str) -> tuple[float, float] | tuple[None, None]:
     import requests
-
-    query_parts = [name]
-    if neighborhood:
-        query_parts.append(neighborhood)
-    if city:
-        query_parts.append(city)
-    query = ", ".join(query_parts)
-
     try:
         resp = requests.get(
             NOMINATIM_URL,
@@ -173,9 +171,37 @@ def _geocode_one(name: str, neighborhood: str, city: str) -> tuple[float, float]
         if results:
             return float(results[0]["lat"]), float(results[0]["lon"])
     except Exception as e:
-        print(f"  [geocoder] Error geocoding '{name}': {e}")
-
+        print(f"  [geocoder] Request error: {e}")
     return None, None
+
+
+_TYPE_WORDS = {"steakhouse", "restaurant", "bar", "cafe", "bakery", "bistro", "grill", "tavern", "brasserie"}
+
+
+def _geocode_one(name: str, neighborhood: str, city: str) -> tuple[float, float] | tuple[None, None]:
+    # Try full query first: name + neighborhood + city
+    parts = [p for p in [name, neighborhood, city] if p]
+    lat, lng = _nominatim_query(", ".join(parts))
+    if lat is not None:
+        return lat, lng
+
+    # Fall back to name + city only (neighborhood can confuse Nominatim)
+    if neighborhood:
+        time.sleep(1.1)
+        fallback_parts = [p for p in [name, city] if p]
+        lat, lng = _nominatim_query(", ".join(fallback_parts))
+        if lat is not None:
+            return lat, lng
+
+    # Strip generic type words from name and try again (e.g. "Peter Luger Steakhouse" -> "Peter Luger")
+    words = name.split()
+    stripped = " ".join(w for w in words if w.lower() not in _TYPE_WORDS)
+    if stripped != name and stripped:
+        time.sleep(1.1)
+        stripped_parts = [p for p in [stripped, city] if p]
+        lat, lng = _nominatim_query(", ".join(stripped_parts))
+
+    return lat, lng
 
 
 def geocode_missing() -> int:
@@ -192,7 +218,7 @@ def geocode_missing() -> int:
             r["latitude"] = lat
             r["longitude"] = lng
             geocoded += 1
-            print(f"  [geocoder] {r['name']} → ({lat:.4f}, {lng:.4f})")
+            print(f"  [geocoder] {r['name']} -> ({lat:.4f}, {lng:.4f})")
         else:
             print(f"  [geocoder] No result for '{r['name']}'")
 
@@ -202,3 +228,41 @@ def geocode_missing() -> int:
         save_restaurants(restaurants)
 
     return geocoded
+
+
+# ─── Chefs ────────────────────────────────────────────────────────────────────
+
+def load_chefs() -> list[dict]:
+    if not CHEFS_FILE.exists():
+        return []
+    return json.loads(CHEFS_FILE.read_text(encoding="utf-8"))
+
+
+def save_chefs(chefs: list[dict]) -> None:
+    CHEFS_FILE.write_text(
+        json.dumps(chefs, indent=2, ensure_ascii=False),
+        encoding="utf-8"
+    )
+
+
+def upsert_chef(article: dict, chef_info: dict) -> bool:
+    """
+    Add a chef entry if not already present (keyed by article URL).
+    Returns True if a new entry was added.
+    """
+    chefs = load_chefs()
+    if any(c["article_url"] == article["url"] for c in chefs):
+        return False
+
+    chefs.append({
+        "id": slugify(chef_info["name"]) if chef_info.get("name") else slugify(article["url"]),
+        "name": chef_info.get("name", ""),
+        "restaurant": chef_info.get("restaurant", ""),
+        "city": chef_info.get("city", ""),
+        "article_url": article["url"],
+        "article_title": article["title"],
+        "article_date": article.get("date", ""),
+        "source_name": article["source_name"],
+    })
+    save_chefs(chefs)
+    return True

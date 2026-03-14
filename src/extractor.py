@@ -1,4 +1,5 @@
 import json
+import re
 from openai import OpenAI, APIError
 
 MODEL = "gpt-4o-mini"
@@ -100,3 +101,57 @@ def extract_restaurants(article: dict, client: OpenAI) -> list[dict]:
         })
 
     return cleaned
+
+
+CHEF_SYSTEM_PROMPT = """You are extracting information about the featured chef from a food newsletter article.
+Return a JSON object with exactly these fields:
+- name: the full name of the featured chef (string, without title like "Chef")
+- restaurant: the name of the chef's own restaurant or primary restaurant (string, empty string if not mentioned)
+- city: the city where the chef primarily works (string)
+Return ONLY a JSON object. No explanation, no markdown, just raw JSON."""
+
+CHEF_USER_TEMPLATE = """Article title: {title}
+
+Article text (first 3000 chars):
+{text}
+
+Extract the featured chef's name, their restaurant, and city as a JSON object."""
+
+
+def extract_chef_info(article: dict, client: OpenAI) -> dict | None:
+    """
+    Extract the featured chef's name, restaurant, and city from an article.
+    Returns a dict or None if extraction fails.
+    """
+    prompt = CHEF_USER_TEMPLATE.format(
+        title=article["title"],
+        text=article["text"][:3000],
+    )
+
+    try:
+        response = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": CHEF_SYSTEM_PROMPT},
+                {"role": "user", "content": prompt},
+            ],
+            max_tokens=256,
+            response_format={"type": "json_object"},
+        )
+    except APIError as e:
+        print(f"  [extractor] Chef extraction API error: {e}")
+        return None
+
+    raw = response.choices[0].message.content.strip()
+    try:
+        info = json.loads(raw)
+        if isinstance(info, dict) and info.get("name"):
+            return {
+                "name": info.get("name", "").strip(),
+                "restaurant": info.get("restaurant", "").strip(),
+                "city": info.get("city", "").strip(),
+            }
+    except json.JSONDecodeError:
+        pass
+
+    return None

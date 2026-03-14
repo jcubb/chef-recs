@@ -95,7 +95,14 @@ def fetch_article(url: str) -> dict | None:
         print(f"  [scraper] Article too short (likely teaser), skipping: {title}")
         return None
 
-    return {"title": title, "text": text, "url": url}
+    # Extract publish date from <time> tag
+    time_tag = soup.find("time")
+    article_date = ""
+    if time_tag:
+        dt = time_tag.get("datetime", "")
+        article_date = dt[:10] if dt else ""  # keep YYYY-MM-DD portion only
+
+    return {"title": title, "text": text, "url": url, "date": article_date}
 
 
 def scrape_new_articles(sources: list[dict], processed_urls: set[str]) -> list[dict]:

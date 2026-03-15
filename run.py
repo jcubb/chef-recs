@@ -73,8 +73,13 @@ def run_pipeline(scrape: bool = True, build: bool = True) -> None:
                 print(f"  [run] {len(restaurants)} extracted -> {added} added, {merged} merged")
 
         print("\n[run] Geocoding missing coordinates...")
-        geocoded = geocode_missing()
+        geocoded, geo_failed = geocode_missing()
         print(f"[run] Geocoded {geocoded} restaurant(s).")
+        if geo_failed:
+            print(f"\n  *** {len(geo_failed)} restaurant(s) could not be geocoded (will retry next run):")
+            for name in geo_failed:
+                print(f"      - {name}")
+            print("  *** Consider adding a street address to fix these.\n")
 
     if build:
         print("\n[run] Building site...")
@@ -111,6 +116,11 @@ def show_status() -> None:
 
     geocoded = sum(1 for r in restaurants if r["latitude"] is not None)
     print(f"\n  Geocoded: {geocoded}/{len(restaurants)}")
+    failed = [r["name"] for r in restaurants if r.get("geocode_failed")]
+    if failed:
+        print(f"  Geocode failures ({len(failed)}):")
+        for name in failed:
+            print(f"    - {name}")
     print(f"{sep}\n")
 
 

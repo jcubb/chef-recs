@@ -13,6 +13,7 @@ Rules:
 - For Manhattan restaurants, always use the specific neighborhood (e.g. "West Village", "SoHo", "Flatiron", "Lower East Side") — never use "Manhattan" as a neighborhood value. If the specific neighborhood is unknown, use an empty string.
 - City should reflect where the restaurant is located — most will be in New York but some articles may cover other cities
 - For New York restaurants, city should always be "New York" regardless of which borough or neighborhood — never use a borough name (Brooklyn, Queens, etc.) or neighborhood name as the city
+- If a street address is mentioned, include it (e.g. "123 Main St"); otherwise use an empty string
 - Extract specific dish recommendations if any are mentioned; otherwise use an empty list
 - Note which chef(s) or person(s) recommended each restaurant
 - Provide a brief (1-2 sentence) context for why it was recommended
@@ -29,6 +30,7 @@ Article text:
 
 Extract all restaurant recommendations as a JSON array. Each object must have these exact keys:
 - name (string)
+- address (string, street address only e.g. "123 Main St", empty string if unknown)
 - neighborhood (string, empty string if unknown)
 - city (string)
 - cuisine (string, empty string if unknown)
@@ -92,6 +94,7 @@ def extract_restaurants(article: dict, client: OpenAI) -> list[dict]:
             continue
         cleaned.append({
             "name": r.get("name", "").strip(),
+            "address": r.get("address", "").strip(),
             "neighborhood": r.get("neighborhood", "").strip(),
             "city": r.get("city", "").strip(),
             "cuisine": r.get("cuisine", "").strip(),

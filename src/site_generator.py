@@ -517,12 +517,13 @@ function showOnMap(id) {{
   if (!r) return;
   showView('map');
   setTimeout(() => {{
+    map.invalidateSize();
     const marker = markerById[id];
     if (marker) {{
       map.setView([r.latitude, r.longitude], 15);
       marker.openPopup();
     }}
-  }}, 50);
+  }}, 150);
 }}
 
 // ── View toggle ────────────────────────────────────────────────────────────
@@ -544,7 +545,10 @@ function showView(view, btn) {{
   if (view === 'map') {{
     mapEl.style.display = 'block';
     if (!map) initMap();
-    else renderMapMarkers();
+    else {{
+      renderMapMarkers();
+      map.invalidateSize();
+    }}
   }} else if (view === 'chefs') {{
     chefsEl.style.display = 'block';
   }} else {{

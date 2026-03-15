@@ -10,7 +10,9 @@ Given the text of a food newsletter article, extract every restaurant that is be
 Rules:
 - Only extract restaurants that are being RECOMMENDED (not the chef's own restaurant, unless another chef also recommends it)
 - If a neighborhood is mentioned, include it; otherwise use an empty string
+- For Manhattan restaurants, always use the specific neighborhood (e.g. "West Village", "SoHo", "Flatiron", "Lower East Side") — never use "Manhattan" as a neighborhood value. If the specific neighborhood is unknown, use an empty string.
 - City should reflect where the restaurant is located — most will be in New York but some articles may cover other cities
+- For New York restaurants, city should always be "New York" regardless of which borough or neighborhood — never use a borough name (Brooklyn, Queens, etc.) or neighborhood name as the city
 - Extract specific dish recommendations if any are mentioned; otherwise use an empty list
 - Note which chef(s) or person(s) recommended each restaurant
 - Provide a brief (1-2 sentence) context for why it was recommended

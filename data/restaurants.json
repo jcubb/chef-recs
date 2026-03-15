@@ -201,9 +201,9 @@
     "added_date": "2026-03-14"
   },
   {
-    "id": "san-sabino-manhattan",
+    "id": "san-sabino-west-village",
     "name": "San Sabino",
-    "neighborhood": "Manhattan",
+    "neighborhood": "West Village",
     "city": "New York",
     "cuisine": "Italian",
     "recommended_dishes": [
@@ -225,9 +225,9 @@
     "added_date": "2026-03-14"
   },
   {
-    "id": "don-angie-manhattan",
+    "id": "don-angie-west-village",
     "name": "Don Angie",
-    "neighborhood": "Manhattan",
+    "neighborhood": "West Village",
     "city": "New York",
     "cuisine": "Italian",
     "recommended_dishes": [
@@ -249,9 +249,9 @@
     "added_date": "2026-03-14"
   },
   {
-    "id": "rezdora-manhattan",
+    "id": "rezdora-flatiron",
     "name": "Rezdôra",
-    "neighborhood": "Manhattan",
+    "neighborhood": "Flatiron",
     "city": "New York",
     "cuisine": "Italian",
     "recommended_dishes": [],
@@ -270,9 +270,9 @@
     "added_date": "2026-03-14"
   },
   {
-    "id": "cafe-china-manhattan",
+    "id": "cafe-china-midtown",
     "name": "Cafe China",
-    "neighborhood": "Manhattan",
+    "neighborhood": "Midtown",
     "city": "New York",
     "cuisine": "Szechuan",
     "recommended_dishes": [],
@@ -291,9 +291,9 @@
     "added_date": "2026-03-14"
   },
   {
-    "id": "bungalow-manhattan",
+    "id": "bungalow-east-village",
     "name": "Bungalow",
-    "neighborhood": "Manhattan",
+    "neighborhood": "East Village",
     "city": "New York",
     "cuisine": "Indian",
     "recommended_dishes": [
@@ -316,9 +316,9 @@
     "added_date": "2026-03-14"
   },
   {
-    "id": "saigon-social-manhattan",
+    "id": "saigon-social-lower-east-side",
     "name": "Saigon Social",
-    "neighborhood": "Manhattan",
+    "neighborhood": "Lower East Side",
     "city": "New York",
     "cuisine": "Vietnamese",
     "recommended_dishes": [
@@ -341,9 +341,9 @@
     "added_date": "2026-03-14"
   },
   {
-    "id": "caffe-panna-manhattan",
+    "id": "caffe-panna-gramercy",
     "name": "Caffe Panna",
-    "neighborhood": "Manhattan",
+    "neighborhood": "Gramercy",
     "city": "New York",
     "cuisine": "Ice Cream",
     "recommended_dishes": [],
@@ -504,24 +504,32 @@
     "added_date": "2026-03-14"
   },
   {
-    "id": "cosme",
+    "id": "cosme-flatiron",
     "name": "Cosme",
-    "neighborhood": "",
-    "city": "Manhattan",
+    "neighborhood": "Flatiron",
+    "city": "New York",
     "cuisine": "Mexican",
     "recommended_dishes": [
       "corn husk meringue",
-      "duck carnitas"
+      "duck carnitas",
+      "seasonal uni tostada",
+      "strip steak"
     ],
     "recommended_by": [
       {
         "chef": "Chef Luis Herrera",
         "source_url": "https://eatingwithexperts.substack.com/p/where-chef-luis-herrera-eats-in-nyc",
         "source_name": "Eating with Experts"
+      },
+      {
+        "chef": "Enrique Olvera",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-mexico-citys-legendary-chef",
+        "source_name": "Eating with Experts"
       }
     ],
     "context": [
-      "Home to one of the best desserts in the city, also known for its mezcal selection."
+      "Home to one of the best desserts in the city, also known for its mezcal selection.",
+      "Chef Enrique suggests these standout dishes from his own restaurant, highlighting the unique corn husk meringue."
     ],
     "latitude": 40.7395503,
     "longitude": -73.9883884,
@@ -715,9 +723,9 @@
     "added_date": "2026-03-14"
   },
   {
-    "id": "cafe-integral-manhattan",
+    "id": "cafe-integral-nolita",
     "name": "Cafe Integral",
-    "neighborhood": "Manhattan",
+    "neighborhood": "Nolita",
     "city": "New York",
     "cuisine": "Coffee",
     "recommended_dishes": [
@@ -738,9 +746,9 @@
     "added_date": "2026-03-14"
   },
   {
-    "id": "sadelles-manhattan",
+    "id": "sadelles-soho",
     "name": "Sadelle’s",
-    "neighborhood": "Manhattan",
+    "neighborhood": "SoHo",
     "city": "New York",
     "cuisine": "American",
     "recommended_dishes": [],
@@ -759,9 +767,9 @@
     "added_date": "2026-03-14"
   },
   {
-    "id": "le-bernardin-manhattan",
+    "id": "le-bernardin-midtown",
     "name": "Le Bernardin",
-    "neighborhood": "Manhattan",
+    "neighborhood": "Midtown",
     "city": "New York",
     "cuisine": "Seafood",
     "recommended_dishes": [
@@ -782,9 +790,9 @@
     "added_date": "2026-03-14"
   },
   {
-    "id": "altro-paradiso-manhattan",
+    "id": "altro-paradiso-soho",
     "name": "Altro Paradiso",
-    "neighborhood": "Manhattan",
+    "neighborhood": "SoHo",
     "city": "New York",
     "cuisine": "Italian",
     "recommended_dishes": [
@@ -806,9 +814,9 @@
     "added_date": "2026-03-14"
   },
   {
-    "id": "bar-contra-manhattan",
+    "id": "bar-contra-lower-east-side",
     "name": "Bar Contra",
-    "neighborhood": "Manhattan",
+    "neighborhood": "Lower East Side",
     "city": "New York",
     "cuisine": "Cocktails",
     "recommended_dishes": [],
@@ -827,9 +835,9 @@
     "added_date": "2026-03-14"
   },
   {
-    "id": "wildair-manhattan",
+    "id": "wildair-lower-east-side",
     "name": "Wildair",
-    "neighborhood": "Manhattan",
+    "neighborhood": "Lower East Side",
     "city": "New York",
     "cuisine": "American",
     "recommended_dishes": [],
@@ -845,32 +853,6 @@
     ],
     "latitude": 40.7200045,
     "longitude": -73.9891428,
-    "added_date": "2026-03-14"
-  },
-  {
-    "id": "cosme-manhattan",
-    "name": "Cosme",
-    "neighborhood": "Manhattan",
-    "city": "New York",
-    "cuisine": "Mexican",
-    "recommended_dishes": [
-      "seasonal uni tostada",
-      "corn husk meringue",
-      "strip steak",
-      "duck carnitas"
-    ],
-    "recommended_by": [
-      {
-        "chef": "Enrique Olvera",
-        "source_url": "https://eatingwithexperts.substack.com/p/where-mexico-citys-legendary-chef",
-        "source_name": "Eating with Experts"
-      }
-    ],
-    "context": [
-      "Chef Enrique suggests these standout dishes from his own restaurant, highlighting the unique corn husk meringue."
-    ],
-    "latitude": 40.7395503,
-    "longitude": -73.9883884,
     "added_date": "2026-03-14"
   }
 ]

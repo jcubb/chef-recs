@@ -147,6 +147,7 @@ def build_site() -> None:
       transition: border-color 0.15s;
     }}
 
+    .card {{ cursor: pointer; }}
     .card:hover {{ border-color: var(--accent); }}
 
     .card-name {{
@@ -283,9 +284,9 @@ def build_site() -> None:
   <h1><span>&#127869;</span> Chef Recs</h1>
   <span id="total-count"></span>
   <div class="view-toggle">
-    <button class="view-btn active" onclick="showView('list')">List</button>
-    <button class="view-btn" onclick="showView('map')">Map</button>
-    <button class="view-btn" onclick="showView('chefs')">Chefs</button>
+    <button class="view-btn active" data-view="list" onclick="showView('list', this)">List</button>
+    <button class="view-btn" data-view="map" onclick="showView('map', this)">Map</button>
+    <button class="view-btn" data-view="chefs" onclick="showView('chefs', this)">Chefs</button>
   </div>
 </header>
 
@@ -326,6 +327,7 @@ const ALL_CHEFS = {chefs_json};
 let filtered = [...ALL_RESTAURANTS];
 let map = null;
 let markers = [];
+let markerById = {{}};
 
 // ── Bootstrap ──────────────────────────────────────────────────────────────
 
@@ -426,7 +428,7 @@ function renderList() {{
       ? `<span class="tag cuisine">${{r.cuisine}}</span>`
       : '';
 
-    return `<div class="card">
+    return `<div class="card" onclick="showOnMap('${{r.id}}')">
       <div class="card-name">${{r.name}}</div>
       <div class="card-meta">${{metaParts.map(p => `<span>${{p}}</span>`).join('')}}</div>
       <div class="tag-row">${{cuisineTag}}${{chefTags}}</div>
@@ -451,6 +453,7 @@ function initMap() {{
 function renderMapMarkers() {{
   markers.forEach(m => m.remove());
   markers = [];
+  markerById = {{}};
 
   const mappable = filtered.filter(r => r.latitude != null);
 
@@ -476,6 +479,7 @@ function renderMapMarkers() {{
 
     dot.addTo(map);
     markers.push(dot);
+    markerById[r.id] = dot;
   }});
 }}
 
@@ -506,11 +510,26 @@ function renderChefs() {{
   }}).join('');
 }}
 
+// ── Show on map ────────────────────────────────────────────────────────────
+
+function showOnMap(id) {{
+  const r = ALL_RESTAURANTS.find(x => x.id === id);
+  if (!r) return;
+  showView('map');
+  setTimeout(() => {{
+    const marker = markerById[id];
+    if (marker) {{
+      map.setView([r.latitude, r.longitude], 15);
+      marker.openPopup();
+    }}
+  }}, 50);
+}}
+
 // ── View toggle ────────────────────────────────────────────────────────────
 
-function showView(view) {{
+function showView(view, btn) {{
   document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
+  (btn || document.querySelector('[data-view="' + view + '"]')).classList.add('active');
 
   const listEl = document.getElementById('list-view');
   const mapEl = document.getElementById('map-view');

@@ -98,6 +98,16 @@ def upsert_restaurants(new_records: list[dict], city_filter: list[str] | None = 
     If city_filter is provided, only records whose city matches (case-insensitive) are kept.
     Returns (added, merged) counts.
     """
+    # Normalize: borough names (e.g. "Brooklyn", "Queens") used as city -> "New York"
+    _BOROUGH_AS_CITY = {"brooklyn", "queens", "bronx", "staten island", "manhattan"}
+    for r in new_records:
+        if r.get("city", "").lower() in _BOROUGH_AS_CITY:
+            r["city"] = "New York"
+    # Normalize: "Manhattan" used as neighborhood -> clear it (too vague)
+    for r in new_records:
+        if r.get("neighborhood", "").lower() == "manhattan":
+            r["neighborhood"] = ""
+
     if city_filter:
         allowed = {c.lower() for c in city_filter}
         new_records = [r for r in new_records if r.get("city", "").lower() in allowed]

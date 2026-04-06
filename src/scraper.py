@@ -128,10 +128,25 @@ def scrape_new_articles(sources: list[dict], processed_urls: set[str]) -> list[d
             print(f"[scraper] Failed to fetch archive for '{name}': {e}")
             continue
 
+        # Allow explicit URL overrides for one-off article slugs that do not
+        # match the standard pattern filter.
+        include_urls = source.get("include_urls", [])
+        if isinstance(include_urls, str):
+            include_urls = [include_urls]
+
         url_pattern = source.get("url_pattern", "")
         if url_pattern:
             all_urls = [u for u in all_urls if url_pattern in u]
             print(f"[scraper] Filtered to {len(all_urls)} articles matching '{url_pattern}'.")
+
+        if include_urls:
+            added = 0
+            for u in include_urls:
+                if u and u not in all_urls:
+                    all_urls.append(u)
+                    added += 1
+            if added:
+                print(f"[scraper] Added {added} explicit article URL(s) from include_urls.")
 
         new_urls = [u for u in all_urls if u not in processed_urls]
         print(f"[scraper] Found {len(all_urls)} articles, {len(new_urls)} new.")

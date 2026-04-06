@@ -25,3 +25,12 @@ python run.py --status     # show stats
 ```
 
 Then push to GitHub — Pages serves from `/docs` automatically.
+
+## Source Config Notes
+
+`sources.json` supports two URL filters:
+
+- `url_pattern`: include archive articles whose URL contains this substring.
+- `include_urls`: always include specific full article URLs, even if they do not match `url_pattern`.
+
+This is useful for one-off posts with different slug naming (for example, `favorite-nyc-restaurants` instead of `where-*`).

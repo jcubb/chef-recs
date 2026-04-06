@@ -306,10 +306,16 @@
         "chef": "Phil Rosenthal",
         "source_url": "https://eatingwithexperts.substack.com/p/where-somebody-feed-phil-eats-in",
         "source_name": "Eating with Experts"
+      },
+      {
+        "chef": "Eric Ripert",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
       }
     ],
     "context": [
-      "Bungalow is noted for its unbelievable Indian cuisine inspired by vintage Indian clubhouses."
+      "Bungalow is noted for its unbelievable Indian cuisine inspired by vintage Indian clubhouses.",
+      "Bungalow is renowned for its Indian cuisine and is one of Chef Ripert’s go-to spots."
     ],
     "latitude": 40.7236539,
     "longitude": -73.9879543,
@@ -854,5 +860,300 @@
     "latitude": 40.7200045,
     "longitude": -73.9891428,
     "added_date": "2026-03-14"
+  },
+  {
+    "id": "masa",
+    "name": "Masa",
+    "address": "10 Columbus Circle",
+    "neighborhood": "",
+    "city": "New York",
+    "cuisine": "Japanese",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Eric Ripert",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Diners looking for top-notch modern Japanese food should head to Masa, considered one of the most premium dining experiences in the world."
+    ],
+    "latitude": 40.7685324,
+    "longitude": -73.9827663,
+    "added_date": "2026-04-06"
+  },
+  {
+    "id": "rezdora",
+    "name": "Rezdora",
+    "address": "27 E 20th St",
+    "neighborhood": "",
+    "city": "New York",
+    "cuisine": "Italian",
+    "recommended_dishes": [
+      "cappelletti in brodo",
+      "raviolo in brown butter"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Eric Ripert",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Ripert claims Rezdora has better pasta than any other Italian restaurant in New York."
+    ],
+    "latitude": 40.7390943,
+    "longitude": -73.9893691,
+    "added_date": "2026-04-06"
+  },
+  {
+    "id": "jean-georges",
+    "name": "Jean Georges",
+    "address": "1 Central Park West",
+    "neighborhood": "",
+    "city": "New York",
+    "cuisine": "",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Eric Ripert",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Jean Georges is considered the jewel of Chef Jean-Georges Vongerichten's culinary empire, blending various flavors and holding two Michelin stars."
+    ],
+    "latitude": 40.7689698,
+    "longitude": -73.9816665,
+    "added_date": "2026-04-06"
+  },
+  {
+    "id": "ernesto-s",
+    "name": "Ernesto's",
+    "address": "259 East Broadway",
+    "neighborhood": "",
+    "city": "New York",
+    "cuisine": "Basque",
+    "recommended_dishes": [
+      "Gildas",
+      "tortilla",
+      "house made sausages"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Eric Ripert",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      },
+      {
+        "chef": "Marc Murphy",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      },
+      {
+        "chef": "Marcus Samuelson",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Ernesto’s offers ingredient-focused pinxtos and is highly recommended by industry experts."
+    ],
+    "latitude": 40.7143271,
+    "longitude": -73.9854388,
+    "added_date": "2026-04-06"
+  },
+  {
+    "id": "essential-by-christophe",
+    "name": "Essential by Christophe",
+    "address": "103 W 77th",
+    "neighborhood": "",
+    "city": "New York",
+    "cuisine": "",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Eric Ripert",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Essential by Christophe is a Michelin-starred restaurant that needs more love according to Chef Ripert."
+    ],
+    "latitude": 40.780935068978,
+    "longitude": -73.976617825207,
+    "added_date": "2026-04-06"
+  },
+  {
+    "id": "nubeluz",
+    "name": "Nubeluz",
+    "address": "25 W 28th St",
+    "neighborhood": "",
+    "city": "New York",
+    "cuisine": "Cocktails",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Eric Ripert",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Nubeluz is recommended for its classy cocktails and stunning views of Manhattan's skyline."
+    ],
+    "latitude": 40.745475595233,
+    "longitude": -73.988917262288,
+    "added_date": "2026-04-06"
+  },
+  {
+    "id": "balthazar",
+    "name": "Balthazar",
+    "address": "80 Spring St",
+    "neighborhood": "",
+    "city": "New York",
+    "cuisine": "",
+    "recommended_dishes": [
+      "oysters",
+      "clams",
+      "shrimp",
+      "burger",
+      "steak tartare"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Eric Ripert",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Balthazar is a reliable spot for Chef Ripert for its consistent quality and highly enjoyable dishes."
+    ],
+    "latitude": 40.7226578,
+    "longitude": -73.9981644,
+    "added_date": "2026-04-06"
+  },
+  {
+    "id": "cafe-commerce",
+    "name": "Cafe Commerce",
+    "address": "964 Lexington Ave",
+    "neighborhood": "",
+    "city": "New York",
+    "cuisine": "American",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Eric Ripert",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Cafe Commerce, which opened in 2024, aims to be a welcoming neighborhood restaurant and is favored by Chef Ripert."
+    ],
+    "latitude": 41.2706492,
+    "longitude": -73.7805367,
+    "added_date": "2026-04-06"
+  },
+  {
+    "id": "le-veau-dor",
+    "name": "Le Veau D’Or",
+    "address": "29 E 60th Street",
+    "neighborhood": "",
+    "city": "New York",
+    "cuisine": "French",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Eric Ripert",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Le Veau D’Or is a classic French bistro that is a favorite of Chef Ripert."
+    ],
+    "latitude": 40.764184967039,
+    "longitude": -73.970604312592,
+    "added_date": "2026-04-06"
+  },
+  {
+    "id": "chez-fifi-upper-east-side",
+    "name": "Chez Fifi",
+    "address": "140 East 74th St",
+    "neighborhood": "Upper East Side",
+    "city": "New York",
+    "cuisine": "",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Eric Ripert",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chez Fifi is currently one of the hardest reservations in the city and features bistro-inspired dishes."
+    ],
+    "latitude": 40.771680525863,
+    "longitude": -73.961550935154,
+    "added_date": "2026-04-06"
+  },
+  {
+    "id": "peter-luger-steak-house",
+    "name": "Peter Luger Steak House",
+    "address": "178 Broadway",
+    "neighborhood": "",
+    "city": "New York",
+    "cuisine": "Steakhouse",
+    "recommended_dishes": [
+      "porterhouse steak",
+      "pecan pie",
+      "cheesecake"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Eric Ripert",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Peter Luger Steak House is an iconic restaurant Chef Ripert recommends for its exceptional steak."
+    ],
+    "latitude": 40.7098661,
+    "longitude": -73.9625564,
+    "added_date": "2026-04-06"
+  },
+  {
+    "id": "chefs-choice-at-le-bernardin",
+    "name": "Chef’s Choice at Le Bernardin",
+    "address": "155 W 51st St",
+    "neighborhood": "",
+    "city": "New York",
+    "cuisine": "Seafood",
+    "recommended_dishes": [
+      "tuna carpaccio with foie gras",
+      "salmon with horseradish & caviar",
+      "warm chocolate tart"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Eric Ripert",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Ripert highlights the seafood options at Le Bernardin, specifically the tasting menus which are highly favored."
+    ],
+    "latitude": 40.7613945,
+    "longitude": -73.981691,
+    "added_date": "2026-04-06"
   }
 ]

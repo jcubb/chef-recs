@@ -1,12 +1,5 @@
 [
   {
-    "url": "https://eatingwithexperts.substack.com/p/where-mexico-citys-legendary-chef",
-    "title": "Eating with Experts",
-    "processed_date": "2026-03-14",
-    "source_name": "Eating with Experts",
-    "restaurants_extracted": 0
-  },
-  {
     "url": "https://eatingwithexperts.substack.com/p/where-chef-alexia-duchene-eats-in",
     "title": "Eating with Experts",
     "processed_date": "2026-03-14",
@@ -33,5 +26,19 @@
     "processed_date": "2026-03-14",
     "source_name": "Eating with Experts",
     "restaurants_extracted": 7
+  },
+  {
+    "url": "https://eatingwithexperts.substack.com/p/where-mexico-citys-legendary-chef",
+    "title": "Eating with Experts",
+    "processed_date": "2026-03-14",
+    "source_name": "Eating with Experts",
+    "restaurants_extracted": 11
+  },
+  {
+    "url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+    "title": "Eating with Experts",
+    "processed_date": "2026-04-06",
+    "source_name": "Eating with Experts",
+    "restaurants_extracted": 13
   }
 ]

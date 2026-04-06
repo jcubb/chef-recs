@@ -48,5 +48,15 @@
     "article_title": "Where Mexico City's Legendary Chef Enrique Olvera Eats in NYC",
     "article_date": "",
     "source_name": "Eating with Experts"
+  },
+  {
+    "id": "eric-ripert",
+    "name": "Eric Ripert",
+    "restaurant": "Le Bernardin",
+    "city": "New York City",
+    "article_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+    "article_title": "Eating with Experts",
+    "article_date": "",
+    "source_name": "Eating with Experts"
   }
 ]

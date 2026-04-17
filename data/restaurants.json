@@ -1155,5 +1155,129 @@
     "latitude": 40.7613945,
     "longitude": -73.981691,
     "added_date": "2026-04-06"
+  },
+  {
+    "id": "sun-hing-lung-chinatown",
+    "name": "Sun Hing Lung",
+    "address": "58 Henry St",
+    "neighborhood": "Chinatown",
+    "city": "New York",
+    "cuisine": "Chinese",
+    "recommended_dishes": [
+      "rice rolls"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Chef Eric Huang",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-chef-eric-huang-eats-in-nyc",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Sun Hing Lung was one of the first spots that came to mind for Chef Huang when talking about the best places in Chinatown, known for their affordable rice rolls cooked to order."
+    ],
+    "latitude": 40.7128526,
+    "longitude": -73.9950956,
+    "added_date": "2026-04-17"
+  },
+  {
+    "id": "super-taste-chinatown",
+    "name": "Super Taste",
+    "address": "26 Eldridge St",
+    "neighborhood": "Chinatown",
+    "city": "New York",
+    "cuisine": "Chinese",
+    "recommended_dishes": [
+      "peanut noodles",
+      "dumplings"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Chef Eric Huang",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-chef-eric-huang-eats-in-nyc",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Huang described Super Taste with four words: 'Great name, great food,' and emphasized the affordable noodles and dumplings."
+    ],
+    "latitude": 40.7151467,
+    "longitude": -73.9933719,
+    "added_date": "2026-04-17"
+  },
+  {
+    "id": "spicy-village-chinatown",
+    "name": "Spicy Village",
+    "address": "68 Forsyth St B",
+    "neighborhood": "Chinatown",
+    "city": "New York",
+    "cuisine": "Chinese",
+    "recommended_dishes": [
+      "Dapanji",
+      "lamb buns",
+      "dumplings"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Chef Eric Huang",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-chef-eric-huang-eats-in-nyc",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Huang recommends the Dapanji, calling it 'really delicious, really comforting,' along with the lamb buns and dumplings as must-tries."
+    ],
+    "latitude": 40.7170069,
+    "longitude": -73.993396,
+    "added_date": "2026-04-17"
+  },
+  {
+    "id": "anthony-son-panini-shoppe-williamsburg",
+    "name": "Anthony & Son Panini Shoppe",
+    "address": "433 Graham Ave",
+    "neighborhood": "Williamsburg",
+    "city": "New York",
+    "cuisine": "Italian-American",
+    "recommended_dishes": [
+      "sandwiches"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Chef Eric Huang",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-chef-eric-huang-eats-in-nyc",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Huang describes this panini shop as his 'when I'm feeling sad' food, featuring a variety of comforting sandwiches."
+    ],
+    "latitude": 40.717941,
+    "longitude": -73.945103,
+    "added_date": "2026-04-17"
+  },
+  {
+    "id": "lowerline-brooklyn",
+    "name": "Lowerline",
+    "address": "794 Washington Ave",
+    "neighborhood": "Brooklyn",
+    "city": "New York",
+    "cuisine": "Cajun",
+    "recommended_dishes": [
+      "gumbo",
+      "po-boy"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Chef Eric Huang",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-chef-eric-huang-eats-in-nyc",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Huang expressed a desire to visit this under-the-radar New Orleans-inspired restaurant in NYC, highlighting the classic Cajun dishes."
+    ],
+    "latitude": 40.6742194,
+    "longitude": -73.9632572,
+    "added_date": "2026-04-17"
   }
 ]

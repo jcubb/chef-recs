@@ -40,5 +40,12 @@
     "processed_date": "2026-04-06",
     "source_name": "Eating with Experts",
     "restaurants_extracted": 13
+  },
+  {
+    "url": "https://eatingwithexperts.substack.com/p/where-chef-eric-huang-eats-in-nyc",
+    "title": "Eating with Experts",
+    "processed_date": "2026-04-17",
+    "source_name": "Eating with Experts",
+    "restaurants_extracted": 5
   }
 ]

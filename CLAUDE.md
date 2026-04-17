@@ -290,3 +290,9 @@ Deduplication uses `slugify(name + neighborhood)`. If the same restaurant is ext
 - Categories/tags: user-defined tags (e.g., "date night", "quick lunch")
 - "Visited" tracking: mark restaurants as visited with notes
 - Google Maps list export: generate a format importable to Google Maps saved lists
+
+## How to Update (reminder for Jerry!)
+cd "c:/Users/gcubb/OneDrive/Python/chef-recs"
+python run.py
+Then commit and push:
+git add -A && git commit -m "update restaurants" && git push

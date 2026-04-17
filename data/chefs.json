@@ -58,5 +58,15 @@
     "article_title": "Eating with Experts",
     "article_date": "",
     "source_name": "Eating with Experts"
+  },
+  {
+    "id": "eric-huang",
+    "name": "Eric Huang",
+    "restaurant": "Pecking House",
+    "city": "New York City",
+    "article_url": "https://eatingwithexperts.substack.com/p/where-chef-eric-huang-eats-in-nyc",
+    "article_title": "Eating with Experts",
+    "article_date": "",
+    "source_name": "Eating with Experts"
   }
 ]

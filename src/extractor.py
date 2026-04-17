@@ -2,6 +2,11 @@ import json
 import re
 from openai import OpenAI, APIError
 
+_TITLE_PREFIX = re.compile(r"^Chef\s+", re.IGNORECASE)
+
+def _strip_title(name: str) -> str:
+    return _TITLE_PREFIX.sub("", name).strip()
+
 MODEL = "gpt-4o-mini"
 
 SYSTEM_PROMPT = """You are a restaurant data extraction assistant.
@@ -99,7 +104,7 @@ def extract_restaurants(article: dict, client: OpenAI) -> list[dict]:
             "city": r.get("city", "").strip(),
             "cuisine": r.get("cuisine", "").strip(),
             "recommended_dishes": [d for d in r.get("recommended_dishes", []) if d],
-            "recommended_by": [p for p in r.get("recommended_by", []) if p],
+            "recommended_by": [_strip_title(p) for p in r.get("recommended_by", []) if p],
             "context": r.get("context", "").strip(),
             "source_url": r.get("source_url", article["url"]),
             "source_name": r.get("source_name", article["source_name"]),

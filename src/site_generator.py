@@ -181,6 +181,28 @@ def build_site() -> None:
     }}
 
     .tag.cuisine {{ background: var(--accent-dim); color: var(--accent); border-color: transparent; }}
+    .tag.closed {{ background: rgba(220,50,50,0.15); color: #e05555; border-color: transparent; }}
+
+    .card.closed {{ opacity: 0.55; }}
+    .card.closed .card-name {{ text-decoration: line-through; text-decoration-color: #e05555; }}
+
+    .checkbox-filter {{
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+    }}
+
+    .checkbox-filter input {{
+      min-width: auto;
+      width: 15px;
+      height: 15px;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }}
 
     .dishes {{
       font-size: 12px;
@@ -304,6 +326,10 @@ def build_site() -> None:
   <select id="filter-source" onchange="applyFilters()">
     <option value="">All sources</option>
   </select>
+  <label class="checkbox-filter">
+    <input type="checkbox" id="filter-hide-closed" checked onchange="applyFilters()" />
+    Hide closed
+  </label>
 </div>
 
 <div id="result-count"></div>
@@ -356,7 +382,7 @@ function populateFilters() {{
 
   populateSelect('filter-neighborhood', [...neighborhoods].sort());
   populateSelect('filter-cuisine', [...cuisines].sort());
-  populateSelect('filter-chef', [...chefs].sort());
+  populateSelect('filter-chef', [...chefs].sort((a, b) => a.localeCompare(b)));
   populateSelect('filter-source', [...sources].sort());
 }}
 
@@ -376,8 +402,10 @@ function applyFilters() {{
   const cuisine = document.getElementById('filter-cuisine').value;
   const chef = document.getElementById('filter-chef').value;
   const source = document.getElementById('filter-source').value;
+  const hideClosed = document.getElementById('filter-hide-closed').checked;
 
   filtered = ALL_RESTAURANTS.filter(r => {{
+    if (hideClosed && r.closed) return false;
     if (q && !r.name.toLowerCase().includes(q) &&
         !r.neighborhood.toLowerCase().includes(q) &&
         !r.cuisine.toLowerCase().includes(q)) return false;
@@ -428,10 +456,14 @@ function renderList() {{
       ? `<span class="tag cuisine">${{r.cuisine}}</span>`
       : '';
 
-    return `<div class="card" onclick="showOnMap('${{r.id}}')">
+    const closedTag = r.closed
+      ? `<span class="tag closed">CLOSED</span>`
+      : '';
+
+    return `<div class="card${{r.closed ? ' closed' : ''}}" onclick="showOnMap('${{r.id}}')">
       <div class="card-name">${{r.name}}</div>
       <div class="card-meta">${{metaParts.map(p => `<span>${{p}}</span>`).join('')}}</div>
-      <div class="tag-row">${{cuisineTag}}${{chefTags}}</div>
+      <div class="tag-row">${{closedTag}}${{cuisineTag}}${{chefTags}}</div>
       ${{dishesHtml}}
       ${{contextHtml}}
     </div>`;

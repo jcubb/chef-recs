@@ -47,5 +47,19 @@
     "processed_date": "2026-04-17",
     "source_name": "Eating with Experts",
     "restaurants_extracted": 5
+  },
+  {
+    "url": "https://eatingwithexperts.substack.com/p/chef-marc-murphys-favorite-nyc-restaurants",
+    "title": "Eating with Experts",
+    "processed_date": "2026-05-27",
+    "source_name": "Eating with Experts",
+    "restaurants_extracted": 8
+  },
+  {
+    "url": "https://eatingwithexperts.substack.com/p/9-spots-chefs-wish-more-people-knew",
+    "title": "Eating with Experts",
+    "processed_date": "2026-05-27",
+    "source_name": "Eating with Experts",
+    "restaurants_extracted": 8
   }
 ]

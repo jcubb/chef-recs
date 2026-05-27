@@ -60,10 +60,16 @@
         "chef": "Alexia Duchêne",
         "source_url": "https://eatingwithexperts.substack.com/p/where-chef-alexia-duchene-eats-in",
         "source_name": "Eating with Experts"
+      },
+      {
+        "chef": "Alexia Duchêne",
+        "source_url": "https://eatingwithexperts.substack.com/p/9-spots-chefs-wish-more-people-knew",
+        "source_name": "Eating with Experts"
       }
     ],
     "context": [
-      "According to Chef Duchêne, Hen House is a hidden gem offering great fusion dishes with a street-food influence."
+      "According to Chef Duchêne, Hen House is a hidden gem offering great fusion dishes with a street-food influence.",
+      "Alexia Duchêne expresses her love for Hen House, noting its creative approach to Lebanese street food."
     ],
     "latitude": 40.7270198,
     "longitude": -73.9855018,
@@ -932,15 +938,19 @@
   },
   {
     "id": "ernesto-s",
-    "name": "Ernesto's",
+    "name": "Ernesto’s",
     "address": "259 East Broadway",
-    "neighborhood": "",
+    "neighborhood": "Lower East Side",
     "city": "New York",
     "cuisine": "Basque",
     "recommended_dishes": [
       "Gildas",
       "tortilla",
-      "house made sausages"
+      "house made sausages",
+      "salt cod",
+      "croquetas",
+      "pintxo matrimonio",
+      "chips with Ibérico ham"
     ],
     "recommended_by": [
       {
@@ -957,10 +967,16 @@
         "chef": "Marcus Samuelson",
         "source_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
         "source_name": "Eating with Experts"
+      },
+      {
+        "chef": "Marc Murphy",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-marc-murphys-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
       }
     ],
     "context": [
-      "Ernesto’s offers ingredient-focused pinxtos and is highly recommended by industry experts."
+      "Ernesto’s offers ingredient-focused pinxtos and is highly recommended by industry experts.",
+      "Marc highlighted this under-the-radar Basque taverna for its exceptional wine program and unique dishes, including a highly praised salt cod."
     ],
     "latitude": 40.7143271,
     "longitude": -73.9854388,
@@ -970,19 +986,25 @@
     "id": "essential-by-christophe",
     "name": "Essential by Christophe",
     "address": "103 W 77th",
-    "neighborhood": "",
+    "neighborhood": "Upper West Side",
     "city": "New York",
-    "cuisine": "",
+    "cuisine": "French",
     "recommended_dishes": [],
     "recommended_by": [
       {
         "chef": "Eric Ripert",
         "source_url": "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
         "source_name": "Eating with Experts"
+      },
+      {
+        "chef": "Eric Ripert",
+        "source_url": "https://eatingwithexperts.substack.com/p/9-spots-chefs-wish-more-people-knew",
+        "source_name": "Eating with Experts"
       }
     ],
     "context": [
-      "Essential by Christophe is a Michelin-starred restaurant that needs more love according to Chef Ripert."
+      "Essential by Christophe is a Michelin-starred restaurant that needs more love according to Chef Ripert.",
+      "Eric Ripert believes Essential by Christophe deserves daily attention for its modern French cuisine and hospitality."
     ],
     "latitude": 40.780935068978,
     "longitude": -73.976617825207,
@@ -1279,5 +1301,312 @@
     "latitude": 40.6742194,
     "longitude": -73.9632572,
     "added_date": "2026-04-17"
+  },
+  {
+    "id": "ma-de-nolita",
+    "name": "Ma•dé",
+    "address": "22 Spring St",
+    "neighborhood": "Nolita",
+    "city": "New York",
+    "cuisine": "Indonesian",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Marc Murphy",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-marc-murphys-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Cédric Vongerichten’s Indonesian restaurant is great for inventive food, with a constantly changing menu focused on seasonal seafood and vegetable-forward dishes."
+    ],
+    "latitude": 40.7221,
+    "longitude": -73.9960,
+    "added_date": "2026-05-27"
+  },
+  {
+    "id": "nami-nori-west-village",
+    "name": "Nami Nori",
+    "address": "33 Carmine St",
+    "neighborhood": "West Village",
+    "city": "New York",
+    "cuisine": "Japanese",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Marc Murphy",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-marc-murphys-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "This temaki bar is known for its perfectly prepped fish with both classic and creative additions, reflecting the training of its founders under a Michelin star sushi chef."
+    ],
+    "latitude": 40.7302633,
+    "longitude": -74.0032937,
+    "added_date": "2026-05-27"
+  },
+  {
+    "id": "pastis-meatpacking",
+    "name": "Pastis",
+    "address": "52 Gansevoort St",
+    "neighborhood": "Meatpacking",
+    "city": "New York",
+    "cuisine": "French",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Marc Murphy",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-marc-murphys-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "An iconic bistro serving classic French fare and popular martinis, which has a storied history in NYC dining."
+    ],
+    "latitude": 40.7392357,
+    "longitude": -74.0069542,
+    "added_date": "2026-05-27"
+  },
+  {
+    "id": "i-sodi-west-village",
+    "name": "I Sodi",
+    "address": "314 Bleecker St",
+    "neighborhood": "West Village",
+    "city": "New York",
+    "cuisine": "Italian",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Marc Murphy",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-marc-murphys-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Celebrated for its homemade pastas and inspired by the family farm in Tuscany, I Sodi is a favorite for its culinary excellence."
+    ],
+    "latitude": 40.7334026,
+    "longitude": -74.0048765,
+    "added_date": "2026-05-27"
+  },
+  {
+    "id": "abcv-flatiron",
+    "name": "abcV",
+    "address": "38 E 19th St",
+    "neighborhood": "Flatiron",
+    "city": "New York",
+    "cuisine": "Vegetarian",
+    "recommended_dishes": [
+      "seasonal corn wontons"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Marc Murphy",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-marc-murphys-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Known for its light, market-driven vegetarian dishes, abcV is praised for its flavor and is a frequent lunch choice for Marc."
+    ],
+    "latitude": 40.7380365,
+    "longitude": -73.9892448,
+    "added_date": "2026-05-27"
+  },
+  {
+    "id": "atla-noho",
+    "name": "Atla",
+    "address": "372 Lafayette St",
+    "neighborhood": "NoHo",
+    "city": "New York",
+    "cuisine": "Mexican",
+    "recommended_dishes": [
+      "guacamole",
+      "half branzino"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Marc Murphy",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-marc-murphys-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Atla offers a delightful Mexican menu, with standout dishes like guacamole and branzino that reflect Marc's culinary tastes."
+    ],
+    "latitude": 40.7272564,
+    "longitude": -73.9939092,
+    "added_date": "2026-05-27"
+  },
+  {
+    "id": "barbuto-west-village",
+    "name": "Barbuto",
+    "address": "113 Horatio St",
+    "neighborhood": "West Village",
+    "city": "New York",
+    "cuisine": "Italian",
+    "recommended_dishes": [
+      "crudo",
+      "calamari salad",
+      "shrimp pasta"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Marc Murphy",
+        "source_url": "https://eatingwithexperts.substack.com/p/chef-marc-murphys-favorite-nyc-restaurants",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "A beloved neighborhood institution known for its roast chicken, Barbuto is also popular among chefs for its diverse menu and inviting atmosphere."
+    ],
+    "latitude": 40.7388598,
+    "longitude": -74.0093992,
+    "added_date": "2026-05-27"
+  },
+  {
+    "id": "han-song-ting-flushing",
+    "name": "Han Song Ting",
+    "address": "",
+    "neighborhood": "Flushing",
+    "city": "New York",
+    "cuisine": "Chinese",
+    "recommended_dishes": [
+      "dumplings"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Brian Tsao",
+        "source_url": "https://eatingwithexperts.substack.com/p/9-spots-chefs-wish-more-people-knew",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Brian Tsao recommends Han Song Ting for its amazing dumplings, which remind him of his time in mainland China."
+    ],
+    "latitude": null,
+    "longitude": null,
+    "added_date": "2026-05-27",
+    "geocode_failed": true
+  },
+  {
+    "id": "main-street-imperial-taiwanese-restaurant",
+    "name": "Main Street Imperial Taiwanese Restaurant",
+    "address": "",
+    "neighborhood": "",
+    "city": "New York",
+    "cuisine": "Taiwanese",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Dominique Ansel",
+        "source_url": "https://eatingwithexperts.substack.com/p/9-spots-chefs-wish-more-people-knew",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Dominique Ansel believes Main Street Imperial is the real deal and reminiscent of Taiwan."
+    ],
+    "latitude": null,
+    "longitude": null,
+    "added_date": "2026-05-27",
+    "geocode_failed": true
+  },
+  {
+    "id": "cafe-mado",
+    "name": "Cafe Mado",
+    "address": "",
+    "neighborhood": "",
+    "city": "New York",
+    "cuisine": "Cafe",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Wayne Cheng",
+        "source_url": "https://eatingwithexperts.substack.com/p/9-spots-chefs-wish-more-people-knew",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Wayne Cheng describes Cafe Mado as a fantastic meal, highlighting its elevated cafe-style offerings."
+    ],
+    "latitude": null,
+    "longitude": null,
+    "added_date": "2026-05-27",
+    "geocode_failed": true
+  },
+  {
+    "id": "le-bicyclette",
+    "name": "Le Bicyclette",
+    "address": "",
+    "neighborhood": "",
+    "city": "New York",
+    "cuisine": "French Bakery",
+    "recommended_dishes": [
+      "brie and fig sandwich"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Frank Pinnello",
+        "source_url": "https://eatingwithexperts.substack.com/p/9-spots-chefs-wish-more-people-knew",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Frank Pinnello recommends Le Bicyclette for its excellent baguette sandwiches, particularly the brie and fig sandwich."
+    ],
+    "latitude": null,
+    "longitude": null,
+    "added_date": "2026-05-27",
+    "geocode_failed": true
+  },
+  {
+    "id": "bhaktis-kitchen",
+    "name": "Bhakti’s Kitchen",
+    "address": "",
+    "neighborhood": "",
+    "city": "New York",
+    "cuisine": "Indian",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Vikas Khanna",
+        "source_url": "https://eatingwithexperts.substack.com/p/9-spots-chefs-wish-more-people-knew",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Vikas Khanna highlights Bhakti’s Kitchen for its amazing Indian food and the care in how it is prepared and presented."
+    ],
+    "latitude": null,
+    "longitude": null,
+    "added_date": "2026-05-27",
+    "geocode_failed": true
+  },
+  {
+    "id": "monkey-king-bushwick",
+    "name": "Monkey King",
+    "address": "",
+    "neighborhood": "Bushwick",
+    "city": "New York",
+    "cuisine": "Asian-American",
+    "recommended_dishes": [
+      "ribs",
+      "fried rice"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Isabel Lee",
+        "source_url": "https://eatingwithexperts.substack.com/p/9-spots-chefs-wish-more-people-knew",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Isabel Lee praises Monkey King for its cultural connection and delicious food, particularly the ribs and fried rice."
+    ],
+    "latitude": 40.7061629,
+    "longitude": -73.9210971,
+    "added_date": "2026-05-27"
   }
 ]

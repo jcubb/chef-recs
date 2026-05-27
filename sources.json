@@ -5,7 +5,9 @@
     "enabled": true,
     "url_pattern": "where-",
     "include_urls": [
-      "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants"
+      "https://eatingwithexperts.substack.com/p/chef-eric-riperts-favorite-nyc-restaurants",
+      "https://eatingwithexperts.substack.com/p/chef-marc-murphys-favorite-nyc-restaurants",
+      "https://eatingwithexperts.substack.com/p/9-spots-chefs-wish-more-people-knew"
     ],
     "city_filter": ["New York", "New York City", "NYC", "Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island"]
   }

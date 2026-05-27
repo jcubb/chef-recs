@@ -68,5 +68,25 @@
     "article_title": "Eating with Experts",
     "article_date": "",
     "source_name": "Eating with Experts"
+  },
+  {
+    "id": "marc-murphy",
+    "name": "Marc Murphy",
+    "restaurant": "Benchmarc Group",
+    "city": "New York",
+    "article_url": "https://eatingwithexperts.substack.com/p/chef-marc-murphys-favorite-nyc-restaurants",
+    "article_title": "Chef Marc Murphy's Favorite NYC Restaurants",
+    "article_date": "2026-04-20",
+    "source_name": "Eating with Experts"
+  },
+  {
+    "id": "vikas-khanna",
+    "name": "Vikas Khanna",
+    "restaurant": "Bungalow",
+    "city": "New York",
+    "article_url": "https://eatingwithexperts.substack.com/p/9-spots-chefs-wish-more-people-knew",
+    "article_title": "Eating with Experts",
+    "article_date": "",
+    "source_name": "Eating with Experts"
   }
 ]

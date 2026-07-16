@@ -116,7 +116,9 @@ def show_status() -> None:
 
     geocoded = sum(1 for r in restaurants if r["latitude"] is not None)
     print(f"\n  Geocoded: {geocoded}/{len(restaurants)}")
-    failed = [r["name"] for r in restaurants if r.get("geocode_failed")]
+    # A record with coordinates is not a failure, even if a stale geocode_failed
+    # flag lingers from before it was geocoded (e.g. a manual lat/lng override).
+    failed = [r["name"] for r in restaurants if r.get("geocode_failed") and r["latitude"] is None]
     if failed:
         print(f"  Geocode failures ({len(failed)}):")
         for name in failed:

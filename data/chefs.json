@@ -88,5 +88,45 @@
     "article_title": "Eating with Experts",
     "article_date": "",
     "source_name": "Eating with Experts"
+  },
+  {
+    "id": "michael-anthony",
+    "name": "Michael Anthony",
+    "restaurant": "Waldorf Astoria",
+    "city": "New York",
+    "article_url": "https://eatingwithexperts.substack.com/p/where-chef-michael-anthony-eats-in",
+    "article_title": "Eating with Experts",
+    "article_date": "",
+    "source_name": "Eating with Experts"
+  },
+  {
+    "id": "drew",
+    "name": "Drew",
+    "restaurant": "",
+    "city": "",
+    "article_url": "https://eatingwithexperts.substack.com/p/legendary-restaurateur-behind-nobu",
+    "article_title": "Eating with Experts",
+    "article_date": "2026-02-19",
+    "source_name": "Eating with Experts"
+  },
+  {
+    "id": "eric-madonna",
+    "name": "Eric Madonna",
+    "restaurant": "Bar Madonna",
+    "city": "Brooklyn",
+    "article_url": "https://eatingwithexperts.substack.com/p/eric-madonna-on-opening-a-bar-in",
+    "article_title": "Eating with Experts",
+    "article_date": "2026-01-30",
+    "source_name": "Eating with Experts"
+  },
+  {
+    "id": "alberto-marcolongo",
+    "name": "Alberto Marcolongo",
+    "restaurant": "",
+    "city": "New York City",
+    "article_url": "https://eatingwithexperts.substack.com/p/a-former-ducasse-chef-is-throwing",
+    "article_title": "Eating with Experts",
+    "article_date": "",
+    "source_name": "Eating with Experts"
   }
 ]

@@ -123,7 +123,9 @@
     "neighborhood": "West Village",
     "city": "New York",
     "cuisine": "Cocktail Bar",
-    "recommended_dishes": [],
+    "recommended_dishes": [
+      "Miami Vice Negroni"
+    ],
     "recommended_by": [
       {
         "chef": "Alexia Duchêne",
@@ -132,7 +134,8 @@
       }
     ],
     "context": [
-      "Chef Duchêne enjoys the casual cocktail atmosphere and experimental snacks that Sip and Guzzle offers."
+      "Chef Duchêne enjoys the casual cocktail atmosphere and experimental snacks that Sip and Guzzle offers.",
+      "This dual-concept cocktail bar offers an exciting blend of New York and Tokyo influences, making for an excellent experience."
     ],
     "latitude": 40.731415,
     "longitude": -74.002447,
@@ -643,7 +646,9 @@
     "cuisine": "Contemporary American",
     "recommended_dishes": [
       "tahini chickpeas",
-      "polenta bread"
+      "polenta bread",
+      "fantastic steaks",
+      "unique lasagna"
     ],
     "recommended_by": [
       {
@@ -655,10 +660,16 @@
         "chef": "Francis Maling",
         "source_url": "https://eatingwithexperts.substack.com/p/where-chef-yara-of-hellbender-eats",
         "source_name": "Eating with Experts"
+      },
+      {
+        "chef": "Michael Anthony",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-chef-michael-anthony-eats-in",
+        "source_name": "Eating with Experts"
       }
     ],
     "context": [
-      "Located near Hellbender, Rolo’s offers standout dishes like their homemade pasta and polenta bread, making it a favorite for Yara and Chef Maling."
+      "Located near Hellbender, Rolo’s offers standout dishes like their homemade pasta and polenta bread, making it a favorite for Yara and Chef Maling.",
+      "A favorite in industry circles since their 2021 opening, Rolo’s is a neighborhood spot in Ridgewood with wood-fired cooking that’s well worth the trip out to Queens."
     ],
     "latitude": 40.7019307,
     "longitude": -73.9034953,
@@ -1321,7 +1332,7 @@
       "Chef Cédric Vongerichten’s Indonesian restaurant is great for inventive food, with a constantly changing menu focused on seasonal seafood and vegetable-forward dishes."
     ],
     "latitude": 40.7221,
-    "longitude": -73.9960,
+    "longitude": -73.996,
     "added_date": "2026-05-27"
   },
   {
@@ -1486,10 +1497,9 @@
     "context": [
       "Brian Tsao recommends Han Song Ting for its amazing dumplings, which remind him of his time in mainland China."
     ],
-    "latitude": null,
-    "longitude": null,
-    "added_date": "2026-05-27",
-    "geocode_failed": true
+    "latitude": 40.7612,
+    "longitude": -73.8315,
+    "added_date": "2026-05-27"
   },
   {
     "id": "main-street-imperial-taiwanese-restaurant",
@@ -1509,10 +1519,9 @@
     "context": [
       "Dominique Ansel believes Main Street Imperial is the real deal and reminiscent of Taiwan."
     ],
-    "latitude": null,
-    "longitude": null,
-    "added_date": "2026-05-27",
-    "geocode_failed": true
+    "latitude": 40.7571,
+    "longitude": -73.829,
+    "added_date": "2026-05-27"
   },
   {
     "id": "cafe-mado",
@@ -1532,14 +1541,13 @@
     "context": [
       "Wayne Cheng describes Cafe Mado as a fantastic meal, highlighting its elevated cafe-style offerings."
     ],
-    "latitude": null,
-    "longitude": null,
-    "added_date": "2026-05-27",
-    "geocode_failed": true
+    "latitude": 40.6729035,
+    "longitude": -73.9626484,
+    "added_date": "2026-05-27"
   },
   {
-    "id": "le-bicyclette",
-    "name": "Le Bicyclette",
+    "id": "la-bicyclette",
+    "name": "La Bicyclette Bakery",
     "address": "",
     "neighborhood": "",
     "city": "New York",
@@ -1557,10 +1565,9 @@
     "context": [
       "Frank Pinnello recommends Le Bicyclette for its excellent baguette sandwiches, particularly the brie and fig sandwich."
     ],
-    "latitude": null,
-    "longitude": null,
-    "added_date": "2026-05-27",
-    "geocode_failed": true
+    "latitude": 40.7144,
+    "longitude": -73.9591,
+    "added_date": "2026-05-27"
   },
   {
     "id": "bhaktis-kitchen",
@@ -1580,10 +1587,9 @@
     "context": [
       "Vikas Khanna highlights Bhakti’s Kitchen for its amazing Indian food and the care in how it is prepared and presented."
     ],
-    "latitude": null,
-    "longitude": null,
-    "added_date": "2026-05-27",
-    "geocode_failed": true
+    "latitude": 40.7238,
+    "longitude": -73.9885,
+    "added_date": "2026-05-27"
   },
   {
     "id": "monkey-king-bushwick",
@@ -1609,5 +1615,432 @@
     "latitude": 40.7061629,
     "longitude": -73.9210971,
     "added_date": "2026-05-27"
+  },
+  {
+    "id": "quique-crudo-west-village",
+    "name": "Quique Crudo",
+    "address": "27 Bedford Steet",
+    "neighborhood": "West Village",
+    "city": "New York",
+    "cuisine": "Mexican seafood",
+    "recommended_dishes": [
+      "live scallop aguachile",
+      "lemongrass lobster crudo"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Michael Anthony",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-chef-michael-anthony-eats-in",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Recommended for its fun atmosphere and great cocktails, Quique's creative take on Mexican seafood never misses."
+    ],
+    "latitude": 40.7291813,
+    "longitude": -74.0036625,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "four-twenty-five-midtown-east",
+    "name": "Four Twenty Five",
+    "address": "425 Park Ave",
+    "neighborhood": "Midtown East",
+    "city": "New York",
+    "cuisine": "seasonally driven dining",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Michael Anthony",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-chef-michael-anthony-eats-in",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Anthony admires Chef Jonathan Benno’s work at Four Twenty Five, where seasonally driven dining is elegantly crafted."
+    ],
+    "latitude": 40.7604466,
+    "longitude": -73.9710384,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "leons-greenwich-village",
+    "name": "Leon’s",
+    "address": "817 Broadway",
+    "neighborhood": "Greenwich Village",
+    "city": "New York",
+    "cuisine": "Italian",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Michael Anthony",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-chef-michael-anthony-eats-in",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Leon’s is Chef Nick Anderer’s latest restaurant featuring Italian cooking rooted in the Mediterranean, with an exceptional wine list."
+    ],
+    "latitude": 40.733256,
+    "longitude": -73.9914891,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "bartolo-west-village",
+    "name": "Bartolo",
+    "address": "310 W 4th St",
+    "neighborhood": "West Village",
+    "city": "New York",
+    "cuisine": "",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Michael Anthony",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-chef-michael-anthony-eats-in",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Known for its cool space and the great meals prepared by Chef Ryan Bartlow, Bartolo reflects a broad influence of Spanish cooking."
+    ],
+    "latitude": 40.7372563,
+    "longitude": -74.0039713,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "lolas-nomad",
+    "name": "Lola’s",
+    "address": "2 W 28th St",
+    "neighborhood": "NoMad",
+    "city": "New York",
+    "cuisine": "Asian and Southern influenced New American",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Michael Anthony",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-chef-michael-anthony-eats-in",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "An understated approach to cooking with vegetables, Lola's is run by Chef Suzanne Cupps, a former protégé of Chef Michael Anthony."
+    ],
+    "latitude": 41.7111197,
+    "longitude": -73.9294116,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "frenchette-tribeca",
+    "name": "Frenchette",
+    "address": "241 W Broadway",
+    "neighborhood": "TriBeCa",
+    "city": "New York",
+    "cuisine": "French brasserie",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Michael Anthony",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-chef-michael-anthony-eats-in",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "A James Beard Award-winning French brasserie that has made a mark on the city, making it hard to get in."
+    ],
+    "latitude": 40.7196471,
+    "longitude": -74.0057569,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "santi-midtown-east",
+    "name": "Santi",
+    "address": "11 E 53rd St",
+    "neighborhood": "Midtown East",
+    "city": "New York",
+    "cuisine": "Italian",
+    "recommended_dishes": [
+      "handmade pasta"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Michael Anthony",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-chef-michael-anthony-eats-in",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Michael White’s return to the city includes an Italian restaurant known for its handmade pasta, making it an exciting new opening."
+    ],
+    "latitude": 40.7521874,
+    "longitude": -73.9880883,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "aquavit-midtown",
+    "name": "Aquavit",
+    "address": "65 E 55th St",
+    "neighborhood": "Midtown",
+    "city": "New York",
+    "cuisine": "Nordic",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Michael Anthony",
+        "source_url": "https://eatingwithexperts.substack.com/p/where-chef-michael-anthony-eats-in",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Emma Bengtsson maintains two Michelin stars at Aquavit, showcasing seasonal Nordic cooking with precision."
+    ],
+    "latitude": 40.7607818,
+    "longitude": -73.9721848,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "employees-only-west-village",
+    "name": "Employees Only",
+    "address": "510 Hudson St",
+    "neighborhood": "West Village",
+    "city": "New York",
+    "cuisine": "",
+    "recommended_dishes": [
+      "Ready, Fire, Aim"
+    ],
+    "recommended_by": [],
+    "context": [
+      "Highly regarded in NYC’s bar scene for over 20 years, Employees Only is a go-to starting point for many bartenders and cocktail enthusiasts."
+    ],
+    "latitude": 40.7334339,
+    "longitude": -74.0060767,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "maison-premiere-williamsburg",
+    "name": "Maison Premiere",
+    "address": "298 Bedford Ave",
+    "neighborhood": "Williamsburg",
+    "city": "New York",
+    "cuisine": "",
+    "recommended_dishes": [],
+    "recommended_by": [],
+    "context": [
+      "With a focus on raw bar offerings, live jazz, and top-tier cocktails, this bar is a beloved spot in Williamsburg."
+    ],
+    "latitude": 40.7142409,
+    "longitude": -73.9616034,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "attaboy-lower-east-side",
+    "name": "Attaboy",
+    "address": "134 Eldridge St",
+    "neighborhood": "Lower East Side",
+    "city": "New York",
+    "cuisine": "",
+    "recommended_dishes": [
+      "Left Hand cocktail"
+    ],
+    "recommended_by": [],
+    "context": [
+      "A speakeasy without a menu, Attaboy invites guests to explore their cocktail preferences, often leading to delightful discoveries."
+    ],
+    "latitude": 40.7188823,
+    "longitude": -73.9913742,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "bar-madonna-williamsburg",
+    "name": "Bar Madonna",
+    "address": "367 Metropolitan Ave",
+    "neighborhood": "Williamsburg",
+    "city": "New York",
+    "cuisine": "",
+    "recommended_dishes": [
+      "Don Fanucci"
+    ],
+    "recommended_by": [],
+    "context": [
+      "Quickly gaining a reputation for excellent cocktails and hospitality since its opening in April 2024, Bar Madonna is a noteworthy destination."
+    ],
+    "latitude": 40.7142231,
+    "longitude": -73.785829,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "double-chicken-please-lower-east-side",
+    "name": "Double Chicken Please",
+    "address": "115 Allen St",
+    "neighborhood": "Lower East Side",
+    "city": "New York",
+    "cuisine": "",
+    "recommended_dishes": [],
+    "recommended_by": [],
+    "context": [
+      "Renowned for their unique food-flavored cocktails, they have proven to be a fun and innovative spot in the bar scene."
+    ],
+    "latitude": 40.7195842,
+    "longitude": -73.9904912,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "overstory-financial-district",
+    "name": "Overstory",
+    "address": "70 Pine St",
+    "neighborhood": "Financial District",
+    "city": "New York",
+    "cuisine": "",
+    "recommended_dishes": [],
+    "recommended_by": [],
+    "context": [
+      "Situated on the 64th floor, Overstory offers superb cocktails complemented by stunning views, making it a desirable spot for bar-goers."
+    ],
+    "latitude": 40.7065765,
+    "longitude": -74.0080763,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "angels-share-west-village",
+    "name": "Angel’s Share",
+    "address": "45 Grove St",
+    "neighborhood": "West Village",
+    "city": "New York",
+    "cuisine": "",
+    "recommended_dishes": [],
+    "recommended_by": [],
+    "context": [
+      "With a storied history and a recent revitalization under new management, Angel's Share has moved up the ranks on the best bar list."
+    ],
+    "latitude": 40.7330115,
+    "longitude": -74.0043296,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "martinys-gramercy",
+    "name": "Martiny’s",
+    "address": "121 E 17th St",
+    "neighborhood": "Gramercy",
+    "city": "New York",
+    "cuisine": "",
+    "recommended_dishes": [],
+    "recommended_by": [],
+    "context": [
+      "Formerly a head bartender at a celebrated bar, Takuma Watanabe brings his vision to Martiny’s in this cozy space."
+    ],
+    "latitude": 40.7361503,
+    "longitude": -73.9877103,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "clemente-bar-flatiron",
+    "name": "Clemente Bar",
+    "address": "11 Madison Ave",
+    "neighborhood": "Flatiron",
+    "city": "New York",
+    "cuisine": "",
+    "recommended_dishes": [],
+    "recommended_by": [],
+    "context": [
+      "This intimate cocktail lounge has quickly established its reputation, providing excellent service and drinks above a three Michelin-star restaurant."
+    ],
+    "latitude": 40.8537938,
+    "longitude": -73.9211999,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "superbueno-east-village",
+    "name": "Superbueno",
+    "address": "13 1st Ave",
+    "neighborhood": "East Village",
+    "city": "New York",
+    "cuisine": "Mexican-American",
+    "recommended_dishes": [
+      "vodka y soda"
+    ],
+    "recommended_by": [],
+    "context": [
+      "Known for its vibrant atmosphere and inventive cocktails, Superbueno is a must-visit during happy hour."
+    ],
+    "latitude": 40.7234538,
+    "longitude": -73.9885506,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "schmuck-east-village",
+    "name": "Schmuck",
+    "address": "97 1st Ave",
+    "neighborhood": "East Village",
+    "city": "New York",
+    "cuisine": "",
+    "recommended_dishes": [],
+    "recommended_by": [],
+    "context": [
+      "With a reputation for a friendly vibe and exceptional service, Schmuck is a place where you can expect hospitality and quality drinks."
+    ],
+    "latitude": 40.7263913,
+    "longitude": -73.9864117,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "bar-snack-east-village",
+    "name": "Bar Snack",
+    "address": "92 2nd Ave",
+    "neighborhood": "East Village",
+    "city": "New York",
+    "cuisine": "",
+    "recommended_dishes": [],
+    "recommended_by": [],
+    "context": [
+      "Bar Snack offers a unique twist on classic cocktails in a laid-back environment, making it a favorite for many."
+    ],
+    "latitude": 40.7269947,
+    "longitude": -73.9886158,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "benoit",
+    "name": "Benoit",
+    "address": "",
+    "neighborhood": "",
+    "city": "New York",
+    "cuisine": "French",
+    "recommended_dishes": [
+      "octopus paccheri"
+    ],
+    "recommended_by": [
+      {
+        "chef": "Alain Ducasse",
+        "source_url": "https://eatingwithexperts.substack.com/p/a-former-ducasse-chef-is-throwing",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Chef Alberto Marcolongo was allowed by Alain Ducasse to add Italian dishes to the menu at Benoit, showcasing his unique culinary creativity."
+    ],
+    "latitude": 40.7625321,
+    "longitude": -73.9772542,
+    "added_date": "2026-07-15"
+  },
+  {
+    "id": "employees-only",
+    "name": "Employees Only",
+    "address": "",
+    "neighborhood": "",
+    "city": "New York",
+    "cuisine": "",
+    "recommended_dishes": [],
+    "recommended_by": [
+      {
+        "chef": "Alberto Marcolongo",
+        "source_url": "https://eatingwithexperts.substack.com/p/a-former-ducasse-chef-is-throwing",
+        "source_name": "Eating with Experts"
+      }
+    ],
+    "context": [
+      "Matt Maretz of Employees Only has participated in the dinner events, contributing to the evening's atmosphere and offerings."
+    ],
+    "latitude": 40.7334339,
+    "longitude": -74.0060767,
+    "added_date": "2026-07-15"
   }
 ]

@@ -136,8 +136,20 @@ def scrape_new_articles(sources: list[dict], processed_urls: set[str]) -> list[d
 
         url_pattern = source.get("url_pattern", "")
         if url_pattern:
-            all_urls = [u for u in all_urls if url_pattern in u]
-            print(f"[scraper] Filtered to {len(all_urls)} articles matching '{url_pattern}'.")
+            matched = [u for u in all_urls if url_pattern in u]
+            dropped = [u for u in all_urls if url_pattern not in u]
+            print(f"[scraper] Filtered to {len(matched)} of {len(all_urls)} articles matching '{url_pattern}'.")
+
+            # Surface off-pattern articles that are new and not already whitelisted,
+            # so recent posts under a different slug are not silently missed.
+            unseen = [u for u in dropped if u not in processed_urls and u not in include_urls]
+            if unseen:
+                print(f"[scraper] {len(unseen)} off-pattern article(s) skipped (not in include_urls):")
+                for u in unseen:
+                    print(f"    - {u}")
+                print("[scraper] Add any relevant ones to 'include_urls' in sources.json to process them.")
+
+            all_urls = matched
 
         if include_urls:
             added = 0

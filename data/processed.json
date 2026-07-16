@@ -61,5 +61,40 @@
     "processed_date": "2026-05-27",
     "source_name": "Eating with Experts",
     "restaurants_extracted": 8
+  },
+  {
+    "url": "https://eatingwithexperts.substack.com/p/where-chef-michael-anthony-eats-in",
+    "title": "Eating with Experts",
+    "processed_date": "2026-07-15",
+    "source_name": "Eating with Experts",
+    "restaurants_extracted": 9
+  },
+  {
+    "url": "https://eatingwithexperts.substack.com/p/13-nyc-bars-named-on-north-americas",
+    "title": "Eating with Experts",
+    "processed_date": "2026-07-15",
+    "source_name": "Eating with Experts",
+    "restaurants_extracted": 13
+  },
+  {
+    "url": "https://eatingwithexperts.substack.com/p/legendary-restaurateur-behind-nobu",
+    "title": "Eating with Experts",
+    "processed_date": "2026-07-15",
+    "source_name": "Eating with Experts",
+    "restaurants_extracted": 0
+  },
+  {
+    "url": "https://eatingwithexperts.substack.com/p/eric-madonna-on-opening-a-bar-in",
+    "title": "Eating with Experts",
+    "processed_date": "2026-07-15",
+    "source_name": "Eating with Experts",
+    "restaurants_extracted": 0
+  },
+  {
+    "url": "https://eatingwithexperts.substack.com/p/a-former-ducasse-chef-is-throwing",
+    "title": "Eating with Experts",
+    "processed_date": "2026-07-15",
+    "source_name": "Eating with Experts",
+    "restaurants_extracted": 3
   }
 ]

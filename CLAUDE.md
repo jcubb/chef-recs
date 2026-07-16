@@ -88,13 +88,19 @@ chef-recs/
     "archive_url": "https://eatingwithexperts.substack.com/archive",
     "enabled": true,
     "url_pattern": "where-",
+    "include_urls": [
+      "https://eatingwithexperts.substack.com/p/13-nyc-bars-named-on-north-americas"
+    ],
     "city_filter": ["New York", "New York City", "NYC", "Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island"]
   }
 ]
 ```
 
 - `url_pattern`: if set, only article URLs containing this string are processed. Used to skip non-recommendation posts (e.g. "what I ate this week").
+- `include_urls`: explicit full article URLs that are always processed even if they don't match `url_pattern`. Use this for recommendation posts published under a different slug (e.g. `13-nyc-bars-...` instead of `where-...`).
 - `city_filter`: if set, restaurants extracted from this source are only stored if their `city` field matches one of these values (case-insensitive). Covers all NYC boroughs — the extractor may label Brooklyn restaurants as "Brooklyn" or "New York" so all variants are listed.
+
+**Watch for off-pattern articles:** the newsletter does not slug every recommendation post as `where-*`. On each run the scraper prints how many archive URLs it dropped for not matching `url_pattern` and lists any that are new and not already in `include_urls` (see "off-pattern article(s) skipped" in the output). Review that list after a run and add the relevant ones to `include_urls` — otherwise good posts are silently missed.
 
 ### 2. Scraper (`src/scraper.py`)
 
@@ -194,7 +200,9 @@ After extraction, `geocode_missing()` geocodes restaurants with `latitude: null`
 
 Rate limit: 1.1 second delay between requests (Nominatim requires max 1 req/sec).
 
-If all 3 queries fail, lat/lng stays null — restaurant appears in list but not on map.
+If all 3 queries fail, lat/lng stays null and the record is flagged `geocode_failed: true` — the restaurant appears in the list but not on the map.
+
+**Manual geocode override:** `geocode_missing()` skips any record whose `latitude` is already set, so you can hand-fix a persistent failure by web-searching the real street address, geocoding it (e.g. via Nominatim with the full `"<street>, <borough>, NY <zip>"` query — always constrain to the borough/city or Nominatim may match a same-numbered address elsewhere), and writing `latitude`/`longitude` directly into `data/restaurants.json`. Manual coordinates are never overwritten on future runs. When you do this, also delete any lingering `geocode_failed` flag on that record so `--status` reports it correctly.
 
 ### 6. Site Generator (`src/site_generator.py`)
 
@@ -270,6 +278,9 @@ The OpenAI extractor may label Brooklyn restaurants as either "Brooklyn" or "New
 
 ### Nominatim geocoding misses
 Some restaurants (especially newer or smaller spots) aren't in OpenStreetMap. The 3-tier fallback resolves ~80% of cases. Remaining restaurants appear in the list view only (no map pin).
+
+### False-positive extractions (non-local venues)
+The extractor can pick up a venue that isn't a NYC recommendation — e.g. a place a person is described as being *"from"* or *"of"* rather than recommending. A real example: **The Donovan Bar** (a London cocktail bar) was extracted because a guest bartender "from The Donovan Bar" appeared at a NYC dinner. These slip past `city_filter` when the extractor guesses the city as "New York". A telltale sign is a persistent geocode failure — worth web-searching the name before assuming it's just a missing OSM entry; if it's genuinely elsewhere, delete the record from `data/restaurants.json`.
 
 ### Duplicate restaurants
 Deduplication uses `slugify(name + neighborhood)`. If the same restaurant is extracted twice with different neighborhood values (e.g. "" vs "Manhattan"), two entries will be created. This is rare but can happen when the same restaurant appears in multiple articles.
